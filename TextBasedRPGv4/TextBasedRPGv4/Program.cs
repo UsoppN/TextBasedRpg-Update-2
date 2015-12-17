@@ -483,6 +483,7 @@ namespace TextBasedRPGv4
                 next = 0;
                 Console.Clear();
                 Console.WriteLine("You finish off the Starlight and comsume its Energy... You feel overwhelmed with content.");
+                Console.WriteLine("//////////////////////////////////////////////////////////////////////////////////////////");
                 Console.WriteLine("'Continue' through home");
                 Console.WriteLine("'Menu' to check Inventory OR Status ");
                 Console.WriteLine("'Exit' to quit the menu");
@@ -676,7 +677,9 @@ namespace TextBasedRPGv4
             {
                 Console.Clear();
                 Console.WriteLine("To Be Continued....");
+                Console.WriteLine("Thank You for playing");
                 Console.WriteLine("< Exit");
+                Console.WriteLine("");
                 Input = Console.ReadLine().ToUpper();
                 if (Input =="EXIT")
                 { next = 10; }
