@@ -43,7 +43,6 @@ namespace TextBasedRPGv4
                 {
                     next = 1;
                 }
-                else { }
                 if (Menu_Option == "2")
                 {
                     Console.WriteLine("Eric Luong with the help of Kwame Bryan. ");
@@ -324,7 +323,7 @@ namespace TextBasedRPGv4
             {
                 Console.Clear();
                 Console.WriteLine("You enter the home and feel the lights presence. Upstairs you hear shrieks of anger, the room apears to have just changed right before your eyes. A stair case just appeared out of nowhere.");
-                Console.WriteLine("////////////////////////////////////////////////////////////////////////");
+                Console.WriteLine("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
                 Console.WriteLine("Go up the 'Stairs'?");
                 Console.WriteLine("'Look' around?");
                 Console.WriteLine("'Menu' to check your inventory or health");
@@ -473,7 +472,8 @@ namespace TextBasedRPGv4
             {
                 Console.WriteLine("");
                 Console.WriteLine(" - You won the battle.");
-                Eric.Score += 5;
+                Console.WriteLine("+ 10 Score");
+                Eric.Score += 10;
                 Console.ReadLine();
             }
 
@@ -594,7 +594,7 @@ namespace TextBasedRPGv4
                             { next = 5; }
                         } while (next == 0);
                     }
-                
+
                 if (Input == "FIND")
                 {
                     do
@@ -608,21 +608,21 @@ namespace TextBasedRPGv4
                         { next = 1; }
                         if (Input != "BACK")
                         { next = 0; }
-                    
                         if (Input == "TAKE")
                         {
-                            Console.Clear();
-                            Console.WriteLine("You Take the blade. It is heavy and sinister.");
-                            Console.WriteLine("< Back");
-                            Has_Sword = 1;
-                            Input = Console.ReadLine().ToUpper();
-                            Inventory[2] = "Fuming Blade";
-                            if (Input == "BACK")
-                            { next = 1; }
-                            if (Input != "Back")
-                            { next = 0; }
-                        } 
-                    } while (next == 0);
+                            do {
+                                Console.WriteLine("You Take the blade. It is heavy and sinister. Almost as if it was alive.");
+                                Console.WriteLine("< Back");
+                                Has_Sword = 1;
+                                Input = Console.ReadLine().ToUpper();
+                                Inventory[2] = "Fuming Blade";
+                                if (Input == "BACK")
+                                { next = 1; }
+                                if (Input != "Back")
+                                { next = 0; }
+                            } while (next == 1);
+                        }
+                    } while (next == 1);
                 }
                 if (Input == "MENU")
                 {
